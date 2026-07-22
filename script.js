@@ -218,3 +218,24 @@ document.body.style.opacity="1";
 // =====================
 
 console.log("💍 Wedding Invitation Loaded");
+const musicBtn = document.getElementById("musicToggle");
+
+if (musicBtn && music) {
+
+musicBtn.onclick = () => {
+
+if (music.paused) {
+
+music.play();
+musicBtn.innerHTML = "🎵";
+
+} else {
+
+music.pause();
+musicBtn.innerHTML = "🔇";
+
+}
+
+};
+
+}
