@@ -593,35 +593,33 @@ color:#555;
 ==================================================*/
 
 .heart-circle{
+    width:60px;
+    height:60px;
+    background:#ff4f7a;
+    clip-path: polygon(
+        50% 100%,
+        0% 55%,
+        0% 25%,
+        20% 5%,
+        50% 20%,
+        80% 5%,
+        100% 25%,
+        100% 55%
+    );
 
-width:64px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-height:64px;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
 
-margin:auto;
+    margin:auto;
 
-background:#ff4d6d;
+    animation:heartBeat 1.5s infinite;
 
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-weight:bold;
-
-font-size:22px;
-
-color:white;
-
-position:relative;
-
-animation:heartbeat 1.5s infinite;
-
-box-shadow:0 15px 30px rgba(255,77,109,.35);
-
+    box-shadow:0 10px 30px rgba(255,79,122,.45);
 }
 
 .heart-circle::before,
@@ -771,36 +769,30 @@ line-height:1.7;
              ANIMATIONS
 ==================================================*/
 
-@keyframes heartbeat{
+@keyframes heartBeat{
 
 0%{
-
-transform:scale(1);
-
+    transform:scale(1);
 }
 
-20%{
-
-transform:scale(1.15);
-
+15%{
+    transform:scale(1.18);
 }
 
-40%{
+30%{
+    transform:scale(1);
+}
 
-transform:scale(.95);
-
+45%{
+    transform:scale(1.12);
 }
 
 60%{
-
-transform:scale(1.15);
-
+    transform:scale(1);
 }
 
 100%{
-
-transform:scale(1);
-
+    transform:scale(1);
 }
 
 }
