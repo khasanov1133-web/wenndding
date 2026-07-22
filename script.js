@@ -7,27 +7,19 @@
 // Welcome Screen
 // =====================
 
-cconst welcome = document.getElementById("welcome");
+const welcome = document.getElementById("welcome");
 const openButton = document.getElementById("openInvitation");
-const music = document.getElementById("bgMusic");
 
 if (openButton) {
+    openButton.addEventListener("click", () => {
 
-openButton.addEventListener("click", () => {
+        welcome.classList.add("hideWelcome");
 
-    if (music) {
-        music.volume = 0.4;
-        music.play().catch(() => {});
-    }
+        setTimeout(() => {
+            welcome.style.display = "none";
+        }, 900);
 
-    welcome.classList.add("hideWelcome");
-
-    setTimeout(() => {
-        welcome.style.display = "none";
-    }, 900);
-
-});
-
+    });
 }
 
 // =====================
