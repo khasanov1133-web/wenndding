@@ -7,20 +7,24 @@
 // Welcome Screen
 // =====================
 
-const welcome = document.getElementById("welcome");
+cconst welcome = document.getElementById("welcome");
 const openButton = document.getElementById("openInvitation");
+const music = document.getElementById("bgMusic");
 
 if (openButton) {
 
 openButton.addEventListener("click", () => {
 
-welcome.classList.add("hideWelcome");
+    if (music) {
+        music.volume = 0.4;
+        music.play().catch(() => {});
+    }
 
-setTimeout(() => {
+    welcome.classList.add("hideWelcome");
 
-welcome.style.display = "none";
-
-},900);
+    setTimeout(() => {
+        welcome.style.display = "none";
+    }, 900);
 
 });
 
